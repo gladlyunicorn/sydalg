@@ -35,7 +35,17 @@
 		hi	
 		</div>
 		<div class="textooo">
-			
+		<script>
+$.get( "http://wd.comsci.club/api/kv.php?key=myvisitorcount" ,
+data => {
+var visitorCount = parseInt( data );
+$("#visitor-count").html( visitorCount );
+$.post( "http://wd.comsci.club/api/kv.php?key=myvisitorcount" , {
+value: visitorCount + 1;
+} );
+}
+);
+</script>
 		</div>
 	</body>
 </html>

@@ -36,16 +36,16 @@
 		</div>
 		<div class="textooo">
 		<script>
-$.get( "http://wd.comsci.club/api/kv.php?key=myvisitorcount" ,
-data => {
-var visitorCount = parseInt( data );
-$("#visitor-count").html( visitorCount );
-$.post( "http://wd.comsci.club/api/kv.php?key=myvisitorcount" , {
-value: visitorCount + 1;
-} );
-}
-);
-</script>
+		function DisplayVisits()
+		{
+		// How many visits so far?
+   		 var numVisits = GetCookie("numVisits");
+   		 if (numVisits) numVisits = parseInt(numVisits) + 1;
+   		 else numVisits = 1; // the value for the new cookie
+		// Show the number of visits
+  		  if (numVisits==1) document.write("This is your first visit.");
+   		 else document.write("You have visited this page " + numVisits + " times.");
+		</script>
 		</div>
 	</body>
 </html>

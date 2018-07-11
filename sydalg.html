@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<html>
 <link rel="css"href="css.css"/>
-	<header>Sydalg</header>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<style>
@@ -17,13 +16,7 @@
 			width:50%;
 		}
 		</style>
-		<script>
-		</script>
-		<script src = "script.js"></script>
-	<h3> Visitor Count: </h3>
-	<div id = "visitor-count">
-	</head>
-	<body>
+		
 <body style=background-color:powderblue;>
 		<center>
 		<h1></h1>
@@ -40,52 +33,11 @@
 		</div>
 		<div class="textooo">
 		<script>
-		function DisplayVisits()
-		{
-		// How many visits so far?
-   		 var numVisits = GetCookie("numVisits");
-   		 if (numVisits) numVisits = parseInt(numVisits) + 1;
-   		 else numVisits = 1; // the value for the new cookie
-		// Show the number of visits
-  		  if (numVisits==1) document.write("This is your first visit.");
-   		 else document.write("You have visited this page " + numVisits + " times.");
-		</script>
-			<%@ page import="java.io.*,java.util.*" %>
-<html>
-    <head>
-        <title>Count visitor</title>
-    </head>
-    <body>
-        <form>
-            <fieldset style="width:20%; background-color:#e6ffe6;">
-                <legend>Count visitor</legend>
-                <%
-                    Integer hitsCount = 
-                    (Integer)application.getAttribute("hitCounter");
-                    if( hitsCount ==null || hitsCount == 0 )
-                    {
-                        /* First visit */
-                        out.println("Welcome to my website!!");
-                        hitsCount = 1;
-                    }
-                    else
-                    {
-                        /* return visit */
-                        out.println("Welcome to my website!!");
-                        hitsCount += 1;
-                    }
-                    application.setAttribute("hitCounter", hitsCount);
-                %>
-                <p>You are visitor number: <%= hitsCount%></p>
-            </fieldset>
-        </form>
-    </body>
-</html>
-		</div>
-				<script src = "script.js"></script>
-	<h2> Visitor Count: </h2>
+	<script src = "script.js"></script>
+	<h3> Visitor Count: </h3>
 	<div id = "visitor-count">
-		
+
+				
 	</div>
 	<h3> Comments Section </h3>
 	<p> Name: <input type = "text" id = "commentName"> </p>
@@ -93,7 +45,6 @@
 	<textarea rows = "5" cols = "50" id = "comment"></textarea> <br>
 	<button type="button" id = "submitcomment">Submit</button>
 	<div id = "comments-box">
-
 	</div>
 	</body>
 </html>
